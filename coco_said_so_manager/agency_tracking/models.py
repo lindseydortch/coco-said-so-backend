@@ -5,6 +5,7 @@ from datetime import datetime
 class Agency(models.Model):
   agency_name = models.CharField(max_length=100)
   location = models.CharField(max_length=100)
+  agency_instagram_hadnle = models.CharField(max_length=500, blank=True)
   insta_followers = models.CharField(max_length=100, blank=True)
   digitals_required = models.CharField(max_length=5, blank=True)
   digitals_requirements = models.CharField(max_length=2000, blank=True)
