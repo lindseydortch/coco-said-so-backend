@@ -18,4 +18,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('', include('agency_tracking.urls')),
+    path('', include('photography_list_tracking.urls')),
+    path('', include('goals.urls')),
 ]
