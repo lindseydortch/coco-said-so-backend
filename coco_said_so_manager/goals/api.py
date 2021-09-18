@@ -6,6 +6,6 @@ from .serializers import GoalsSerializer
 class GoalsViewSet(viewsets.ModelViewSet):
   queryset = Goals.objects.all() 
   permission_classes = [
-    permissions.AllowAny
+    permissions.IsAuthenticated
   ]
   serializer_class = GoalsSerializer

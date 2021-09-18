@@ -6,6 +6,6 @@ from .serializers import AgencySerializer
 class AgencyViewSet(viewsets.ModelViewSet):
   queryset = Agency.objects.all() 
   permission_classes = [
-    permissions.AllowAny
+    permissions.IsAuthenticated
   ]
   serializer_class = AgencySerializer

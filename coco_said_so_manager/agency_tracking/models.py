@@ -1,5 +1,6 @@
 from django.db import models
 from datetime import datetime 
+from django.contrib.auth.models import User 
 
 # Create your models here.
 class Agency(models.Model):
@@ -12,6 +13,7 @@ class Agency(models.Model):
   outreach = models.CharField(max_length=100, blank=True)
   date_digitals_submitted = models.DateField(auto_now=False, blank=True)
   notes = models.CharField(max_length=5000, blank=True)
+  owner= models.ForeignKey(User, related_name='agency_tracking', on_delete=models.CASCADE, null=True)
 
   def __str__(self):
     return self.name

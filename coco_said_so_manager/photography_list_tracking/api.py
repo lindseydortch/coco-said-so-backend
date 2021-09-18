@@ -6,6 +6,6 @@ from .serializers import PhotographerSerializer
 class PhotographerViewSet(viewsets.ModelViewSet):
   queryset = Photographer.objects.all() 
   permission_classes = [
-    permissions.AllowAny
+    permissions.IsAuthenticated
   ]
   serializer_class = PhotographerSerializer
