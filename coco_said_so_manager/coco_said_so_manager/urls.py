@@ -20,4 +20,5 @@ urlpatterns = [
     path('', include('agency_tracking.urls')),
     path('', include('photography_list_tracking.urls')),
     path('', include('goals.urls')),
+    path('', include('accounts.urls')),
 ]
